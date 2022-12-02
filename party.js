@@ -116,3 +116,79 @@ const leavingMember = (memberName) => {
 }
 leavingMember("Joline")
 console.log(party)
+ 
+// Prompt 7: Timothy and Sarah have been recruiting. Add a new adventurer to the party. (new adventurer is parameter)
+const newAdventurer = (newMember) => {
+    party.push(newMember)
+}
+let myAdventurer = {
+    name: "Dave Chappell",
+    hitpoints: 75,
+    belongings: ["knife", "water", "gravel"],
+    companion: {
+        name: "elephante", 
+        type: "elephant"
+    }
+
+}
+newAdventurer(myAdventurer)
+console.log(party)
+
+
+let myAdventurer2 = {
+    name: "Sally Chappell",
+    hitpoints: 75,
+    belongings: ["knife", "water", "gravel"],
+    companion: {
+        name: "elephante", 
+        type: "elephant"
+    }
+}
+newAdventurer(myAdventurer2)
+console.log(party)
+
+// Prompt 8: The party has been doing well! They found 200 gold. Create a new property called gold and split the gold evenly between everyone. (amount of gold is parameter)
+const foundGold = (gold) => {
+    let splitGold = gold / party.length
+console.log(splitGold)
+
+party.forEach((el) => {
+    el.gold = splitGold;
+} )
+
+}
+ foundGold(200)
+ console.log(party)
+
+//  Prompt 9: Sarah is tired of taking care of a jellyfish. Subtract some gold from her and change her companion to a bear. 
+let newCompanion = "bear"
+party[1].companion.type = newCompanion
+party[1].gold = (party[1].gold) - 15
+console.log(party)
+
+// Prompt 10: Timothy’s sword has gotten old. Change it to “Rusty Sword" 
+// go through 
+let swordStatus = "Rusty Sword"
+party[0].belongings[0] = swordStatus 
+console.log(party)
+
+// Prompt 11: Write a function called setLeader that takes a name as a parameter. The member with that name should have a new property leader: true while the other members have leader: false.
+// const setLeader = (name) => {
+//     let Leader = setLeader
+//     if (name == name){
+//         return {Leader}
+//         console.log("true")
+//     } else {
+//         return {Leader}
+//         console.log("false")
+//     }
+// }
+// setLeader("Dave Chappell")
+// console.log(party)
+ party.forEach ((setLeader) => {
+    setLeader.leader = false;
+    if (setLeader.name == "Dave Chappell"){
+        setLeader.leader = true
+    }
+ })
+ console.log(party)
